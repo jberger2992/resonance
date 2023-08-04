@@ -1,15 +1,28 @@
-body{
+body {
     background-color: black;
 }
 
-.container{
+.container {
     height: 100vh;
     background-color: rgb(184, 181, 189);
     padding: 0;
 }
 
-header{
+header {
+    height: 13vh;
     color: white;
     text-align: center;
     background-color: rgb(74, 60, 99);
+}
+
+main {
+    margin: 10px
+}
+
+.select-custom {
+    display: inline-block;
+    margin-right: 1rem;
+    min-height: 1.5rem;
+    padding-left: 0.5em;
+    margin-bottom: 0.125rem;
 }
