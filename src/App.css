@@ -19,10 +19,20 @@ main {
     margin: 10px
 }
 
+/* select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+  } */
+
 .select-custom {
     display: inline-block;
     margin-right: 1rem;
     min-height: 1.5rem;
     padding-left: 0.5em;
     margin-bottom: 0.125rem;
+}
+
+.total-pen{
+    background-color: rgb(185, 182, 190);
 }

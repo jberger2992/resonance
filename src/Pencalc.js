@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 
 function Pencalc() {
 
-  const [pCheck, setPCheckP] = useState(true);
+  const [totalP, setTotalP] = useState(0);
   const [pierciingP, setPierciingP] = useState(700);
   const [majorBP, setMajorBP] = useState(5948);
   const [minorBP, setMinorBP] = useState(2974);
   const [crusherP, setCrusherP] = useState(2108);
   const [alkoshP, setAlkoshP] = useState(0);
   const [lightP, setLightP] = useState(0);
-  const [totalP, setTotalP] = useState(0);
   const [nightBP, setNightBP] = useState(0);
   const [necroP, setNecroP] = useState(0);
   const [woodEP, setWoodEP] = useState(0);
@@ -25,33 +24,23 @@ function Pencalc() {
     handleTotal();
   })
 
-  function handleCheck(e){
-    console.log(e)
-    console.log(e.target.checked)
-    if(e.target.checked === false){
-      e.target.checked = true;
-      console.log(e.target.checked)
-      return;
-    }
-  }
-
   return (
     <main className="row justify-content-md-center">
         <h2 className="text-center">Penetration Calculator</h2>
-        <div className="row col-12">
-          <div className="col-6 text-end">
-            <h4>Buff/Debuff</h4>
-          </div>
-          <div className="row col-6">
-            <div className="col-1">
-              <h4>Yes</h4>
-            </div>
-            <div className="row col-2">
-              <h4>No</h4>
-            </div>
-          </div>
-        </div>
         <form className="row col-6">
+          <div className="row">
+            <div className="col-6 text-end">
+              <h5>Buff/Debuff</h5>
+            </div>
+
+              <div className="col-1">
+                <h5>---</h5>
+              </div>
+              <div className="col-1">
+                <h5>Pen</h5>
+              </div>
+
+          </div>
           <div className="row">
             <label className="text-end col-form-label col-sm-6 pt-0">Peircing CP</label>
             <div className="form-check form-check-inline col-1">
@@ -163,9 +152,13 @@ function Pencalc() {
             </div>
             <label htmlFor="tremor" className="col-form-label col-1 pt-0">{tremorP}</label>
           </div>
-          <div className="row">
-            <p className="text-end col-6">Total Pen</p>
-            <p className="col-6">{totalP}</p>
+          <div className="row justify-content-md-center">
+            <div className="col-3">
+             <h5 className="text-end total-pen">Total Pen</h5>
+            </div>
+            <div className="col-3">
+              <h5 className="total-pen">{totalP}</h5>
+            </div>
           </div>
         </form>
     </main>
