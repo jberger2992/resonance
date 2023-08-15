@@ -17,9 +17,10 @@ function Pencalc() {
   const [tremorP, setTremorP] = useState(0);
   const [arenaWP, setArenaWP] = useState(0);
   const [arcanistP, setArcanistP] = useState(0);
+  const [crimsonP, setCrimsonP] = useState(0);
 
   function handleTotal(){
-    setTotalP(pierciingP+majorBP+minorBP+crusherP+alkoshP+lightP+nightBP+necroP+woodEP+setBonusP+velothiP+tremorP+arenaWP+arcanistP);
+    setTotalP(pierciingP+majorBP+minorBP+crusherP+alkoshP+lightP+nightBP+necroP+woodEP+setBonusP+velothiP+tremorP+arenaWP+arcanistP+crimsonP);
   }
 
   useEffect(()=>{
@@ -106,6 +107,14 @@ function Pencalc() {
             <label className="col-form-label col-3 col-sm-1 pt-0">{tremorP}</label>
           </div>
           <div className="row">
+            <label className="text-end col-form-label col-7 col-sm-6 pt-0">Crimson Oath</label>
+            <div className="form-check col-2 col-sm-1">
+              <input className="form-check-input" type="checkbox" name="crimson" id="crimson" value="3541" 
+              onChange={(e) => e.target.checked === true ? setCrimsonP(parseInt(e.target.value)) : setCrimsonP(0)}/>
+            </div>
+            <label className="col-form-label col-3 col-sm-1 pt-0">{crimsonP}</label>
+          </div>
+          <div className="row">
             <label className="text-end col-form-label col-7 col-sm-6 pt-0">Peircing CP</label>
             <div className="form-check col-2 col-sm-1">
               <input className="form-check-input" type="checkbox" name="piercing" id="piercing" value="700" defaultChecked 
@@ -184,7 +193,7 @@ function Pencalc() {
             <label className="col-form-label col-3 col-sm-1 pt-0">{velothiP}</label>
           </div>
           <div className="row">
-            <label className="text-end col-form-label col-7 col-sm-6 pt-0">Arena</label>
+            <label className="text-end col-form-label col-7 col-sm-6 pt-0">Arena Weapon</label>
             <div className="form-check col-2 col-sm-1">
               <input className="form-check-input" type="checkbox" name="arenaWP" id="arenaWP" value="1190" 
               onChange={(e) => e.target.checked === true ? setArenaWP(parseInt(e.target.value)) : setArenaWP(0)}/>
