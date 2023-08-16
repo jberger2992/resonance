@@ -52,7 +52,7 @@ function Critcalc() {
         <form className="row col-lg-6 col-xl-5">
           <div className="row">
             <div className="col-6 text-end">
-              <h5>Buff</h5>
+              <h5>Buff/Debuff</h5>
             </div>
               <div className="col-2 col-sm-1">
                 <h5>-</h5>
@@ -134,7 +134,7 @@ function Critcalc() {
               <option value="20">5</option>
               <option value="24">6</option>
             </select>
-            <label htmlFor="warden" className="col-form-label col-3 col-sm-1 pt-0">{wardenC}</label>
+            <label htmlFor="warden" className="col-form-label col-3 col-sm-1 pt-0">{wardenC+"%"}</label>
           </div>
           <div className="row">
             <label className="text-end col-form-label col-7 col-sm-6 pt-0">Nightblade</label>
@@ -142,7 +142,7 @@ function Critcalc() {
               <input className="form-check-input" type="checkbox" name="nightBC" id="nightBC" value="10" 
               onChange={(e) => e.target.checked === true ? handleClass(e) : setNightBC(0)}/>
             </div>
-            <label className="col-form-label col-3 col-sm-1 pt-0">{nightBC}</label>
+            <label className="col-form-label col-3 col-sm-1 pt-0">{nightBC+"%"}</label>
           </div>
           <div className="row">
             <label className="text-end col-form-label col-7 col-sm-6 pt-0">Templar</label>
@@ -150,7 +150,7 @@ function Critcalc() {
               <input className="form-check-input" type="checkbox" name="templar" id="templar" value="10" 
               onChange={(e) => e.target.checked === true ? handleClass(e) : setTemplarC(0)}/>
             </div>
-            <label className="col-form-label col-3 col-sm-1 pt-0">{templarC}</label>
+            <label className="col-form-label col-3 col-sm-1 pt-0">{templarC+"%"}</label>
           </div>
           <div className="row">
             <label className="text-end col-form-label col-7 col-sm-6 pt-0">Fighting Finesse</label>
@@ -181,4 +181,4 @@ function Critcalc() {
     );
   }
     
-export default Critcalc;   
+export default Critcalc;
